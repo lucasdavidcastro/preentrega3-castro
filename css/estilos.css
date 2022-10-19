@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #960606;
+  background: radial-gradient(circle, #960606 0%, rgba(2, 28, 1, 0.997637) 36%, black 100%);
+  color: white;
+  position: relative;
+  min-height: 100vh; }
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  header h1 {
+    padding: 1rem;
+    font-size: 32px;
+    font-family: cursive;
+    color: blanchedalmond; }
+  header nav ul {
+    display: flex;
+    list-style: none; }
+    header nav ul li {
+      margin: 0 16px; }
+      header nav ul li a {
+        text-decoration: none;
+        color: white; }
+        header nav ul li a:hover {
+          color: red; }
+
+/* media query */
+@media screen and (max-width: 557px) {
+  header {
+    text-align: center; }
+    header nav ul {
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      header nav ul li {
+        margin-top: 1rem; } }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+#mundo {
+  width: 80%;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem; }
+  #mundo p {
+    margin-top: 1.2rem;
+    font-size: 1.2rem; }
+
+.disco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem; }
+  .disco h2 span {
+    font-size: 32px;
+    color: red; }
+  .disco img {
+    width: 500px;
+    margin-top: 1.2rem;
+    border-radius: 1rem; }
+
+/* main discografia */
+#discografia {
+  margin-top: 4rem; }
+
+#cd {
+  display: flex;
+  justify-content: center; }
+  #cd p {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 80%; }
+
+#cd1 {
+  width: 100%; }
+  #cd1 h3 {
+    margin-top: 1.2rem;
+    font-size: 1.8rem;
+    text-align: center; }
+  #cd1 > div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem; }
+  #cd1 div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #cd1 div div p {
+      font-size: 1.4rem; }
+    #cd1 div div ol {
+      margin-top: 1rem; }
+      #cd1 div div ol li {
+        margin-top: 0.4rem; }
+
+#cd3 {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center; }
+  #cd3 div {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: space-evenly; }
+    #cd3 div dl dd {
+      margin-bottom: 0.4rem; }
+    #cd3 div dl dt {
+      margin-bottom: 0.4rem; }
+    #cd3 div dl a {
+      color: white;
+      text-decoration: none; }
+
+/* Contactame */
+#mc {
+  width: 100%;
+  margin-top: 2rem; }
+  #mc section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #mc section p {
+      text-align: center; }
+    #mc section h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: red;
+      margin-bottom: 2rem; }
+    #mc section form {
+      width: 350px;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      justify-content: space-between; }
+      #mc section form div {
+        display: flex;
+        justify-content: end;
+        margin-top: 4px; }
+        #mc section form div input {
+          width: 75%;
+          margin-left: 1rem; }
+      #mc section form textarea {
+        resize: none;
+        margin-top: 8px;
+        margin-bottom: 8px; }
+  #mc > div {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin-top: 3rem; }
+  #mc div a img:hover {
+    transform: scale(1.15);
+    transition: 0.5s; }
+
+/* Videos */
+.video {
+  width: 520px;
+  height: 300px;
+  margin-top: 1.4rem; }
+
+/* Galeria */
+.galeria {
+  margin-right: 24px; }
+  .galeria div {
+    width: 90%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 15px;
+    margin-left: 3rem; }
+    .galeria div img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+      margin: 0 1rem;
+      box-shadow: 2px -1px 54px -16px rgba(180, 0, 0, 0.75);
+      -webkit-box-shadow: 2px -1px 54px -16px rgba(180, 0, 0, 0.75);
+      -moz-box-shadow: 2px -1px 54px -16px rgba(180, 0, 0, 0.75); }
+
+.imag1 {
+  grid-row-start: span 2; }
+
+.imag8 {
+  grid-row-start: span 2; }
+
+.imag9 {
+  grid-column-start: span 2; }
+
+@media screen and (max-width: 557px) {
+  .disco img {
+    width: 300px; }
+  /* inicio*/
+  #mundo {
+    width: 100%;
+    margin-top: 1rem; }
+  /* Hoja de contacto */
+  #mc section p {
+    width: 80%;
+    font-size: 1.2rem; }
+  #mc section form {
+    width: 300px;
+    height: 400px; }
+  .videomargen {
+    padding: 0; }
+  /* video celular bootstrap  */
+  .video {
+    width: 380px;
+    height: 240px; }
+  /* GALERIA */
+  .galeria {
+    margin-right: 0; }
+    .galeria div {
+      grid-template-columns: repeat(1, 1fr);
+      margin-left: 0; }
+  .imag1 {
+    grid-row-start: span 1; }
+  .imag8 {
+    grid-row-start: span 1; }
+  .imag9 {
+    grid-column-start: span 1; }
+  /* DISCOGRAFIA */
+  #cd1 div {
+    flex-direction: column;
+    margin-top: 2rem; }
+    #cd1 div div {
+      margin-top: 2rem; }
+  #cd3 div {
+    flex-direction: column; }
+    #cd3 div dl {
+      margin-top: 2rem; } }
+
+@media screen and (max-width: 380px) {
+  .video {
+    width: 300px;
+    height: 180px; } }
+
+/* pie de pagina */
+footer {
+  background-color: #110f0f;
+  text-align: center;
+  padding: 8px;
+  margin-top: 4rem;
+  bottom: 0%; }
+
+.footerVideo {
+  font-family: 'Times New Roman', Times, serif !important;
+  padding: 0 !important;
+  margin: 0 !important; }
+
+@media screen and (max-width: 557px) {
+  footer {
+    margin-top: 1.6rem; } }

@@ -8,7 +8,8 @@ body {
   background: radial-gradient(circle, #960606 0%, rgba(2, 28, 1, 0.997637) 36%, black 100%);
   color: white;
   position: relative;
-  min-height: 100vh; }
+  min-height: 100vh;
+  font-family: 'Mukta', sans-serif; }
 
 header {
   width: 100%;
@@ -21,26 +22,58 @@ header {
     font-size: 32px;
     font-family: cursive;
     color: blanchedalmond; }
-  header nav ul {
+  header nav div label img {
+    display: none;
+    width: 100%; }
+  header nav div input {
+    display: none; }
+  header nav div ul {
     display: flex;
     list-style: none; }
-    header nav ul li {
+    header nav div ul li {
       margin: 0 16px; }
-      header nav ul li a {
+      header nav div ul li a {
         text-decoration: none;
         color: white; }
-        header nav ul li a:hover {
-          color: red; }
+        header nav div ul li a:hover {
+          color: #221f1f; }
 
 /* media query */
 @media screen and (max-width: 557px) {
   header {
     text-align: center; }
-    header nav ul {
+    header nav div ul {
       flex-wrap: wrap;
       justify-content: space-around; }
-      header nav ul li {
+      header nav div ul li {
         margin-top: 1rem; } }
+
+@media screen and (max-width: 763px) {
+  header nav div label img {
+    display: block;
+    cursor: pointer;
+    margin-right: 1rem; }
+  header nav div ul {
+    z-index: 9999;
+    position: fixed;
+    top: 200px;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: #5a4f4f;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 1s ease-in-out;
+    padding-left: 0;
+    height: 220px; }
+    header nav div ul li a {
+      color: black;
+      font-weight: 600; }
+  header nav div input:checked + ul {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
 
 main {
   display: flex;
@@ -64,7 +97,7 @@ main {
   margin-top: 2rem; }
   .disco h2 span {
     font-size: 32px;
-    color: red; }
+    color: white; }
   .disco img {
     width: 500px;
     margin-top: 1.2rem;
@@ -248,17 +281,82 @@ main {
 
 /* pie de pagina */
 footer {
-  background-color: #110f0f;
-  text-align: center;
-  padding: 8px;
-  margin-top: 4rem;
-  bottom: 0%; }
+  width: 100%;
+  height: 100%;
+  background-color: #221f1f;
+  margin-top: 2rem; }
+  footer .telefonos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    footer .telefonos .tel-l {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+      margin-top: 2rem; }
+      footer .telefonos .tel-l div {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 1rem; }
+        footer .telefonos .tel-l div h3 {
+          font-weight: 500;
+          font-size: 1rem;
+          transform: translateY(12px); }
+        footer .telefonos .tel-l div p {
+          font-size: 1rem;
+          font-weight: 500;
+          text-align: left;
+          transform: translateY(7px); }
+      footer .telefonos .tel-l a img {
+        object-fit: contain;
+        width: 50px; }
+      footer .telefonos .tel-l a:hover {
+        transform: scale(1.15);
+        transition: 0.4s; }
+    footer .telefonos .tel-r {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+      margin-top: 2rem; }
+      footer .telefonos .tel-r div {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0 1rem; }
+        footer .telefonos .tel-r div h3 {
+          font-size: 1rem;
+          font-weight: 500;
+          transform: translatey(12px); }
+        footer .telefonos .tel-r div p {
+          font-size: 1rem;
+          font-weight: 500;
+          text-align: right;
+          transform: translateY(7px); }
+      footer .telefonos .tel-r a img {
+        object-fit: contain;
+        width: 50px; }
+      footer .telefonos .tel-r a:hover {
+        transform: scale(1.15);
+        transition: 0.4s; }
+  footer .yo {
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column; }
 
-.footerVideo {
-  font-family: 'Times New Roman', Times, serif !important;
-  padding: 0 !important;
-  margin: 0 !important; }
+@media screen and (max-width: 769px) {
+  .yo {
+    margin-top: 1rem; } }
 
-@media screen and (max-width: 557px) {
-  footer {
-    margin-top: 1.6rem; } }
+@media screen and (max-width: 376px) {
+  .telefonos {
+    flex-direction: column; } }
